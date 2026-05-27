@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign Up — AuthApp</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- main wrapper centers everything on screen -->
+  <div class="page-wrapper">
+
+    <!-- left side — branding panel -->
+    <div class="left-panel">
+      <div class="brand-box">
+        <div class="brand-logo">🔐</div>
+        <h1 class="brand-name">AuthApp</h1>
+        <p class="brand-tagline">Secure. Simple. Reliable.</p>
+
+        <!-- 3 feature points -->
+        <div class="features">
+          <div class="feature-item">✅ Your data is encrypted and safe</div>
+          <div class="feature-item">✅ Free to use forever</div>
+          <div class="feature-item">✅ Access from any device</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- right side — signup form -->
+    <div class="right-panel">
+      <div class="form-box">
+
+        <h2 class="form-title">Create Account</h2>
+        <p class="form-sub">Fill in the details below to get started</p>
+
+        <!-- full name input -->
+        <div class="input-group">
+          <label for="fullname">Full Name</label>
+          <input type="text" id="fullname" placeholder="e.g. Adwait Mulay" />
+          <span class="error-msg" id="name-error"></span>
+        </div>
+
+        <!-- email input -->
+        <div class="input-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" placeholder="e.g. adwait@gmail.com" />
+          <span class="error-msg" id="email-error"></span>
+        </div>
+
+        <!-- password input -->
+        <div class="input-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="Minimum 6 characters" />
+          <span class="error-msg" id="pass-error"></span>
+
+          <!-- password strength bar -->
+          <div class="strength-bar">
+            <div class="strength-fill" id="strength-fill"></div>
+          </div>
+          <span class="strength-text" id="strength-text"></span>
+        </div>
+
+        <!-- confirm password input -->
+        <div class="input-group">
+          <label for="confirm-password">Confirm Password</label>
+          <input type="password" id="confirm-password" placeholder="Re-enter your password" />
+          <span class="error-msg" id="confirm-error"></span>
+        </div>
+
+        <!-- signup button -->
+        <button class="btn-submit" onclick="handleSignup()">Create Account</button>
+
+        <!-- success message (hidden by default) -->
+        <p class="success-msg" id="success-msg"></p>
+
+        <!-- link to login page -->
+        <p class="switch-link">
+          Already have an account? <a href="login.html">Login here</a>
+        </p>
+
+      </div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
