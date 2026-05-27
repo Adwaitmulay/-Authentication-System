@@ -1,0 +1,407 @@
+/* =============================================
+   STYLE.CSS — Auth System Styles
+   Used by: signup.html, login.html, dashboard.html
+============================================= */
+
+/* reset all default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f2f5;
+  min-height: 100vh;
+}
+
+/* =============================================
+   AUTH PAGES — signup and login layout
+============================================= */
+
+/* wrapper splits screen into left and right */
+.page-wrapper {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* ── LEFT PANEL — dark branding side ── */
+.left-panel {
+  width: 40%;
+  background: linear-gradient(160deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+.brand-box {
+  text-align: center;
+  color: white;
+}
+
+.brand-logo {
+  font-size: 60px;
+  margin-bottom: 16px;
+}
+
+.brand-name {
+  font-size: 32px;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 8px;
+  letter-spacing: 2px;
+}
+
+.brand-tagline {
+  font-size: 16px;
+  color: #a0aec0;
+  margin-bottom: 36px;
+}
+
+/* feature list on left side */
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  text-align: left;
+}
+
+.feature-item {
+  font-size: 14px;
+  color: #cbd5e0;
+  background: rgba(255, 255, 255, 0.07);
+  padding: 12px 16px;
+  border-radius: 8px;
+  border-left: 3px solid #4299e1;
+}
+
+/* ── RIGHT PANEL — form side ── */
+.right-panel {
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  background: #f0f2f5;
+}
+
+/* the form card */
+.form-box {
+  background: white;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 440px;
+}
+
+.form-title {
+  font-size: 26px;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 6px;
+}
+
+.form-sub {
+  font-size: 14px;
+  color: #718096;
+  margin-bottom: 28px;
+}
+
+/* ── INPUT GROUP ── */
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: #4a5568;
+  margin-bottom: 6px;
+  letter-spacing: 0.3px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: inherit;
+  color: #2d3748;
+  background: #f7fafc;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+/* highlight input when focused */
+.input-group input:focus {
+  border-color: #4299e1;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.15);
+  background: white;
+}
+
+/* error message below input */
+.error-msg {
+  display: block;
+  font-size: 12px;
+  color: #e53e3e;
+  margin-top: 5px;
+  min-height: 16px;
+}
+
+/* ── PASSWORD STRENGTH BAR ── */
+.strength-bar {
+  height: 5px;
+  background: #e2e8f0;
+  border-radius: 4px;
+  margin-top: 8px;
+  overflow: hidden;
+}
+
+.strength-fill {
+  height: 100%;
+  width: 0%;
+  border-radius: 4px;
+  transition: width 0.3s, background-color 0.3s;
+}
+
+.strength-text {
+  font-size: 11px;
+  color: #718096;
+  margin-top: 4px;
+  display: block;
+}
+
+/* ── SUBMIT BUTTON ── */
+.btn-submit {
+  width: 100%;
+  padding: 13px;
+  background: #1a1a2e;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+  margin-top: 6px;
+}
+
+.btn-submit:hover {
+  background: #2d3a6e;
+}
+
+.btn-submit:active {
+  transform: scale(0.98);
+}
+
+/* success message */
+.success-msg {
+  text-align: center;
+  font-size: 13px;
+  color: #38a169;
+  margin-top: 14px;
+  font-weight: 500;
+}
+
+/* switch page link */
+.switch-link {
+  text-align: center;
+  font-size: 13px;
+  color: #718096;
+  margin-top: 20px;
+}
+
+.switch-link a {
+  color: #4299e1;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.switch-link a:hover {
+  text-decoration: underline;
+}
+
+/* forgot password link */
+.forgot-link {
+  text-align: right;
+  font-size: 12px;
+  margin-top: -12px;
+  margin-bottom: 16px;
+}
+
+.forgot-link a {
+  color: #4299e1;
+  text-decoration: none;
+}
+
+.forgot-link a:hover {
+  text-decoration: underline;
+}
+
+/* =============================================
+   DASHBOARD PAGE
+============================================= */
+
+/* top navbar */
+.dashboard-nav {
+  background: #1a1a2e;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 40px;
+}
+
+.brand-name-small {
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 1px;
+}
+
+.btn-logout {
+  padding: 8px 20px;
+  background: transparent;
+  color: #fc8181;
+  border: 1.5px solid #fc8181;
+  border-radius: 6px;
+  font-size: 13px;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-logout:hover {
+  background: #fc8181;
+  color: white;
+}
+
+/* dashboard main area */
+.dashboard-body {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* welcome card at top */
+.welcome-card {
+  background: linear-gradient(135deg, #1a1a2e, #0f3460);
+  color: white;
+  padding: 36px;
+  border-radius: 16px;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.welcome-icon {
+  font-size: 48px;
+  margin-bottom: 12px;
+}
+
+.welcome-card h2 {
+  font-size: 26px;
+  margin-bottom: 6px;
+}
+
+.welcome-card p {
+  color: #a0aec0;
+  font-size: 14px;
+}
+
+.login-time {
+  margin-top: 8px;
+  font-size: 12px;
+  color: #718096;
+}
+
+/* stats row */
+.stats-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.stat-card {
+  background: white;
+  padding: 24px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.stat-icon {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.stat-label {
+  font-size: 12px;
+  color: #718096;
+  margin-bottom: 4px;
+}
+
+.stat-value {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1a1a2e;
+}
+
+/* info box */
+.info-box {
+  background: #ebf8ff;
+  border: 1px solid #bee3f8;
+  border-radius: 10px;
+  padding: 18px 22px;
+  font-size: 14px;
+  color: #2b6cb0;
+  line-height: 1.6;
+}
+
+/* =============================================
+   MOBILE RESPONSIVE
+============================================= */
+
+@media (max-width: 768px) {
+
+  /* stack left and right on top of each other */
+  .page-wrapper {
+    flex-direction: column;
+  }
+
+  .left-panel {
+    width: 100%;
+    padding: 30px 20px;
+  }
+
+  .brand-logo {
+    font-size: 40px;
+  }
+
+  .brand-name {
+    font-size: 24px;
+  }
+
+  .right-panel {
+    width: 100%;
+    padding: 30px 16px;
+  }
+
+  .form-box {
+    padding: 28px 20px;
+  }
+
+  /* 1 column on mobile */
+  .stats-row {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-nav {
+    padding: 14px 20px;
+  }
+}
