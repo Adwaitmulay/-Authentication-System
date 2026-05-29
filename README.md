@@ -19,6 +19,11 @@ A complete frontend authentication system built using HTML, CSS and JavaScript w
 
 ## Live Link
 https://adwaitmulay.github.io/-Authentication-System/
+
+Task 2 README — Authentication System:
+## Demo Video 
+https://youtu.be/cbRRenvdZNk
+
 ## Built With
 - HTML
 - CSS3 
